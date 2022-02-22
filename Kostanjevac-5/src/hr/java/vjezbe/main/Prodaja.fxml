@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane fx:id="centar" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.vjezbe.main.ProdajaController">
+   <top>
+      <MenuBar prefHeight="25.0" prefWidth="203.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Artikli">
+            <items>
+                  <Menu mnemonicParsing="false" text="Usluga">
+                    <items>
+                        <MenuItem fx:id="uslugePretraga" mnemonicParsing="false" onAction="#prikaziPretraguUsluga" text="Pretraga" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Automobil">
+                     <items>
+                        <MenuItem fx:id="automobiliPretraga" mnemonicParsing="false" onAction="#prikaziPretraguAutomobila" text="Pretraga" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Stan">
+                     <items>
+                      <MenuItem fx:id="stanoviPretraga" mnemonicParsing="false" onAction="#prikaziPretraguStanova" text="Pretraga" />
+                     </items>
+                  </Menu>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Korisnici">
+               <items>
+                  <Menu mnemonicParsing="false" text="Privatni Korinsik">
+                     <items>
+                        <MenuItem fx:id="privatniKorisniciPretraga" mnemonicParsing="false" onAction="#prikaziPretraguPrivatnihKorisnika" text="Pretraga" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Poslovni Korinsik">
+                     <items>
+                        <MenuItem fx:id="poslovniKorisniciPretraga" mnemonicParsing="false" onAction="#prikaziPretraguPoslovnihKorisnika" text="Pretraga" />
+                     </items>
+                  </Menu>
+               </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+   </center>
+</BorderPane>
